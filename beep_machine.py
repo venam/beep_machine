@@ -31,6 +31,39 @@ class beeper():
     def G(self, delay="2",length="3"):
         self.output+=" -n -f 392.0 "+"-l "+length+" -D "+delay
 
+    def beep(self,string):
+        string = string.split(" ")
+        if(len(string)%3!=0):
+            print len(string)
+            print "error in arguments"
+            return
+        i         = 0
+        for a in string:
+            if i>2:
+                i=0
+            if i==0:
+                note = ""
+                if a == 'A' or a == 'a':
+                    note = "440.0"
+                elif a == 'B' or a == 'b':
+                    note = "493.9"
+                elif a == 'C' or a == 'c':
+                    note = "261.6"
+                elif a == 'D' or a == 'd':
+                    note = "293.7"
+                elif a == 'E' or a == 'e':
+                    note = "329.6"
+                elif a == 'F' or a == 'f':
+                    note = "349.2"
+                elif a == 'G' or a== 'g':
+                    note = "392.0"
+                self.output+=" -n -f "+note
+            elif i==1:
+                self.output+=" -l "+a
+            elif i==2:
+                self.output+=" -D "+a+" "
+            i+=1
+
     def clear(self):
         self.output=" "
 
