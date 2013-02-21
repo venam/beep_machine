@@ -57,6 +57,8 @@ class beeper():
                     note = "349.2"
                 elif a == 'G' or a== 'g':
                     note = "392.0"
+                else:
+                    note = a
                 self.output+=" -n -f "+note
             elif i==1:
                 self.output+=" -l "+a
