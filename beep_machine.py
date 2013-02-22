@@ -1,5 +1,6 @@
 import sys, os
 
+#A ajouter les rondes,blanches,noires,croches,dbl-croches,trpl-croches,pointee
 class beeper():
     def __init__(self):
         self.output = " "
@@ -43,19 +44,26 @@ class beeper():
                 i=0
             if i==0:
                 note = ""
-                if a == 'A' or a == 'a':
+                """
+                A. - noire pointee
+                A) - croche
+                A))- couble croche
+                Ao - ronde
+                A| - blanche
+                """
+                if a                        == 'A' or a == 'a':
                     note = "440.0"
-                elif a == 'B' or a == 'b':
+                elif a                      == 'B' or a == 'b':
                     note = "493.9"
-                elif a == 'C' or a == 'c':
+                elif a                      == 'C' or a == 'c':
                     note = "261.6"
-                elif a == 'D' or a == 'd':
+                elif a                      == 'D' or a == 'd':
                     note = "293.7"
-                elif a == 'E' or a == 'e':
+                elif a                      == 'E' or a == 'e':
                     note = "329.6"
-                elif a == 'F' or a == 'f':
+                elif a                      == 'F' or a == 'f':
                     note = "349.2"
-                elif a == 'G' or a== 'g':
+                elif a                      == 'G' or a == 'g':
                     note = "392.0"
                 else:
                     note = a
