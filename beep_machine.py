@@ -1,55 +1,214 @@
 import sys, os
 
 #A ajouter les rondes,blanches,noires,croches,dbl-croches,trpl-croches,pointee
+#les pauses
 class beeper():
 
 
     def __init__(self):
-        self.output = " "
+        self.output = ""
+        self.delay  = "20"
+        self.length = "120"
 
-    def A(self, delay="2",length="3"):
-        self.output+=" -n -f 440.0 "+"-l "+length+" -D "+delay
+    def E2(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 82.407 "+"-l "+length+" -D "+delay
 
+    def F2(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 87.31 "+"-l "+length+" -D "+delay
 
-    def B(self, delay="2",length="3"):
-        self.output+=" -n -f 493.9 "+"-l "+length+" -D "+delay
+    def F2_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 92.50 "+"-l "+length+" -D "+delay
 
+    def G2(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 98.00 "+"-l "+length+" -D "+delay
 
-    def C(self, delay="2",length="3"):
-        self.output+=" -n -f 261.6 "+"-l "+length+" -D "+delay
+    def G2_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 103.83  "+"-l "+length+" -D "+delay
 
+    def A2(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 110.00 "+"-l "+length+" -D "+delay
 
-    def D(self, delay="2",length="3"):
-        self.output+=" -n -f 293.7 "+"-l "+length+" -D "+delay
+    def A2_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 116.54 "+"-l "+length+" -D "+delay
 
+    def B2(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 123.47 "+"-l "+length+" -D "+delay
 
-    def E(self, delay="2",length="3"):
-        self.output+=" -n -f 329.6 "+"-l "+length+" -D "+delay
+    def C3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 130.81 "+"-l "+length+" -D "+delay
 
+    def C3_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 138.59 "+"-l "+length+" -D "+delay
 
-    def F(self, delay="2",length="3"):
-        self.output+=" -n -f 349.2 "+"-l "+length+" -D "+delay
+    def D3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 146.83 "+"-l "+length+" -D "+delay
 
+    def D3_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 155.56 "+"-l "+length+" -D "+delay
 
-    def G(self, delay="2",length="3"):
-        self.output+=" -n -f 392.0 "+"-l "+length+" -D "+delay
+    def E3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 164.81 "+"-l "+length+" -D "+delay
 
-    def C_(self, delay="2",length="3"):
-        self.output+=" -n f 277.2 "+"-l "+length+" -D "+delay
+    def F3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 174.61 "+"-l "+length+" -D "+delay
 
-    def D_(self, delay="2",length="3"):
-        self.output+=" -n f 311.1 "+"-l "+length+" -D "+delay
+    def F3_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 185.00 "+"-l "+length+" -D "+delay
 
-    def F_(self, delay="2", length="3"):
-        self.output+=" -n f 370.0 "+"-l "+length+" -D "+delay
+    def G3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 196.00 "+"-l "+length+" -D "+delay
 
-    def G_(self, delay="2",length="3"):
-        self.output+=" -n f 415.3 "+"-l "+length+" -D "+delay
+    def G3_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 207.65 "+"-l "+length+" -D "+delay
 
-    def A_(self,delay="2",length="3"):
-        self.output+=" -n f 466.2 "+"-l "+length+" -D "+delay
-    
-    #This might or might not work, or work only with the file generated by this module specially
+    def A3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 220.00  "+"-l "+length+" -D "+delay
+
+    def A3_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 233.08 "+"-l "+length+" -D "+delay
+
+    def B3(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 246.94 "+"-l "+length+" -D "+delay
+
+    def C4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 261.63 "+"-l "+length+" -D "+delay
+
+    def C4_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 277.18 "+"-l "+length+" -D "+delay
+
+    def D4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 293.67 "+"-l "+length+" -D "+delay
+
+    def D4_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 311.13 "+"-l "+length+" -D "+delay
+
+    def E4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 329.63  "+"-l "+length+" -D "+delay
+
+    def F4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 349.23 "+"-l "+length+" -D "+delay
+
+    def F4_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 369.99 "+"-l "+length+" -D "+delay
+
+    def G4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 392.00 "+"-l "+length+" -D "+delay
+
+    def G4_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 415.30 "+"-l "+length+" -D "+delay
+
+    def A4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 440 "+"-l "+length+" -D "+delay
+
+    def A4_(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 466.16 "+"-l "+length+" -D "+delay
+
+    def B4(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 493.88 "+"-l "+length+" -D "+delay
+
+    def C5(self, delay="",length=""):
+        if delay=="" or length =="":
+            delay  = self.delay
+            length = self.length
+        self.output+=" -n -f 523.25 "+"-l "+length+" -D "+delay
+
+   #This might or might not work, or work only with the file generated by this module specially
     def read(self,file_location):
         file_content = open(file_location,'r').read()
         file_content = file_content.replace("#!/bin/sh\n","")
@@ -61,7 +220,16 @@ class beeper():
             notes = notes.split(" ")
             for description in notes:
                 print description
-                `
+
+    def back(self):
+        splited = self.output.split("-n -f ")
+        splited.pop()
+        self.output = ""
+        for a in splited:
+            if a!=" ":
+                self.output+= " -n -f " + a
+            print a
+
 
     def beep(self,string):
         string = string.split(" ")
@@ -121,7 +289,7 @@ class beeper():
     def run(self,file=""):
         if(file!=""):
             open(file,'w').write("#!/bin/sh\nbeep -l 1"+self.output)
-        os.system("beep -l 1"+self.output)
+        os.system("beep -l 1  "+self.output)
 
 
 
